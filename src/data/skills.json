@@ -1,0 +1,74 @@
+[
+    {
+        "name": "HTML/CSS",
+        "icon": "language-html5",
+        "color": "#f16529",
+        "proficiency": 90
+    },
+    {
+        "name": "JavaScript/TypeScript",
+        "icon": "language-javascript",
+        "color": "#efd81d",
+        "proficiency": 90
+    },
+    {
+        "name": "Java",
+        "icon": "language-java",
+        "color": "#f29111",
+        "proficiency": 80
+    },
+    {
+        "name": "Kotlin",
+        "icon": "language-kotlin",
+        "color": "#239bff",
+        "proficiency": 90
+    },
+    {
+        "name": "SQL",
+        "icon": "database",
+        "color": "#686868",
+        "proficiency": 80
+    },
+    {
+        "name": "C# (.NET)",
+        "icon": "language-csharp",
+        "color": "#38008f",
+        "proficiency": 65
+    },
+    {
+        "name": "Python",
+        "icon": "language-python",
+        "color": "#356c9b",
+        "proficiency": 75
+    },
+    {
+        "name": "Vue",
+        "icon": "vuejs",
+        "color": "#3fb27f",
+        "proficiency": 95
+    },
+    {
+        "name": "Spring Boot/Framework",
+        "icon": "checkbox-multiple-blank-circle",
+        "color": "#6cb33e",
+        "proficiency": 75
+    },
+    {
+        "name": "TDD (Jest/JUnit)",
+        "icon": "test-tube",
+        "color": "#d54f48",
+        "proficiency": 45
+    },
+    {
+        "name": "GitHub Actions",
+        "icon": "github",
+        "color": "#302f2f",
+        "proficiency": 50
+    },
+    {
+        "name": "Docker",
+        "icon": "docker",
+        "color": "#0997e5",
+        "proficiency": 40
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "degree": "Bachelor's degree, Information Technology (Software Development)",
+        "institution": "University of South Australia",
+        "period": "2016 – 2018",
+        "achievements": [
+            "Designed the software architecture of the Organ Donation System for DonateLife SA (SA Health)",
+            "GPA of 6.8"
+        ]
+    },
+    {
+        "degree": "Honours degree, Information Technology (Research-based)",
+        "institution": "University of South Australia",
+        "period": "2020",
+        "achievements": [
+            "Composed a thesis and designed a framework for automated per-unit personalised manufacturing",
+            "First-class Honours, GPA of 7"
+        ]
+    }
+]

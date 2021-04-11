@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Email",
+        "value": "contact@yihao.moe",
+        "link": "mailto:contact@yihao.moe",
+        "icon": "email"
+    },
+    {
+        "title": "Website",
+        "value": "www.yihao.moe",
+        "link": "https://www.yihao.moe",
+        "icon": "web-box"
+    },
+    {
+        "title": "Birth Date",
+        "value": "15 Jan 1997",
+        "icon": "cake"
+    },
+    {
+        "title": "Location",
+        "value": "Adelaide → Sydney",
+        "icon": "crosshairs-gps"
+    }
+]

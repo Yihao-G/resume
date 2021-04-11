@@ -1,0 +1,21 @@
+[
+    {
+        "title": "GitHub",
+        "value": "@Yihao-G",
+        "link": "https://github.com/Yihao-G",
+        "icon": "github"
+    },
+    {
+        "title": "LinkedIn",
+        "value": "Yihao Gao",
+        "link": "https://www.linkedin.com/in/yihao-gao/",
+        "icon": "linkedin"
+    },
+    {
+        "title": "Mastodon",
+        "value": "@yihao@m.yihao.moe",
+        "note": "Chinese",
+        "link": "https://m.yihao.moe/@yihao",
+        "icon": "mastodon"
+    }
+]

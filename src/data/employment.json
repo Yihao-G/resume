@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Tutor",
+        "company": "University of South Australia",
+        "subtitle": "For Database Fundamentals & Web Development practical classes",
+        "period": "2019",
+        "isVolunteer": false,
+        "openByDefault": true,
+        "achievements": [
+            "Spoke and taught in front of 20+ students each class",
+            "Guided students through practical programming tasks, answered relevant questions",
+            "Demonstrated database and web development (relational DB schema design, SQL query, ASP.NET & JavaScript)",
+            "Facilitated student discussions for them to develop problem-solving and programming skills",
+            "Provided suggestions on how to succeed in the courses and at the University",
+            "Received outstanding student review and feedback"
+        ]
+    },
+    {
+        "title": "Software Developer",
+        "company": "Commercial POS & IT Networks / Cache Technologies",
+        "period": "2018 – Current",
+        "isVolunteer": false,
+        "openByDefault": true,
+        "achievements": [
+            "Gathered comprehensive requirements from stakeholders",
+            "Designed both the system architecture and the user interface of a Business Intelligence (BI) web application",
+            "Developed the BI application, consists of a backend (Spring Boot + Kotlin) and a frontend (Vue + TypeScript)",
+            "Wrote complex SQL queries to obtain sales and financial data required by the BI application",
+            "The beta-stage BI application received overwhelmingly positive feedback from customers",
+            "Wrote GitHub Actions workflows to automatically deploy applications as Docker images, reduced deployment time significantly",
+            "Cooperated with the business owner and other colleagues, and trained new employees",
+            "Developed side projects for customers, mostly using C# (.NET / Windows Form)"
+        ]
+    },
+    {
+        "title": "Peer Assisted Study Session (PASS) Leader",
+        "company": "University of South Australia",
+        "subtitle": "For the courses of Web Development & Software Development with C++",
+        "period": "2018",
+        "isVolunteer": false,
+        "openByDefault": false,
+        "achievements": [
+            "Taught course content to students in a relaxed and informal environment as a previous excellent student in the courses",
+            "Demonstrated coding",
+            "Facilitated student discussion",
+            "Provided suggestions on how to succeed in the courses",
+            "Received overall positive feedback from students"
+        ]
+    },
+    {
+        "title": "IT Consultant",
+        "company": "Broker Hub SA",
+        "period": "2018",
+        "isVolunteer": true,
+        "openByDefault": false,
+        "achievements": [
+            "Built a WordPress-based company website and attracted ~15 unique pageviews per day",
+            "Answered and solved software and hardware problems"
+        ]
+    },
+    {
+        "title": "UniMentor",
+        "company": "University of South Australia",
+        "period": "2017 – 2018",
+        "isVolunteer": true,
+        "openByDefault": false,
+        "achievements": [
+            "Liaised assigned mentees (new students)",
+            "Sent new updates about the University",
+            "Provided good learning advice",
+            "Answered mentee's questions",
+            "Spoke publicly in front of new UniMentors",
+            "Hosted an orientation session of more than 200 new students"
+        ]
+    },
+    {
+        "title": "Study Help PALS",
+        "company": "University of South Australia",
+        "period": "2017",
+        "isVolunteer": true,
+        "openByDefault": false,
+        "achievements": [
+            "Provided friendly study support at drop-in sessions",
+            "Provided referral to related resources in areas such as paper referencing",
+            "Answered various types of questions from students",
+            "Evaluated each enquiry and gave feedback to the University’s Learning Adviser team"
+        ]
+    },
+    {
+        "title": "IT Consultant",
+        "company": "Adelaide Park Lands Preservation Association",
+        "period": "2017",
+        "isVolunteer": true,
+        "openByDefault": false,
+        "achievements": [
+            "Built a file archive website with full-text searching",
+            "Helped to change Adelaide Park names on Google Maps"
+        ]
+    }
+]
