@@ -9,6 +9,6 @@ html, body, #app {
 }
 
 body {
-    background-image: url("src/assets/background.jpg");
+    background-image: url("/src/assets/background.jpg");
     @apply bg-center bg-cover bg-fixed;
 }
