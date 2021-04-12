@@ -20,8 +20,14 @@
 import { computed, defineComponent, PropType } from 'vue'
 import { toStringSize } from '../../utils/toStringSize'
 
+declare module 'csstype' {
+    interface Properties {
+        '--y-margin'?: string
+    }
+}
+
 export interface TimelineItem {
-    key: PropertyKey
+    key: string | number
     sideText?: string
 }
 
@@ -33,7 +39,7 @@ export default defineComponent({
             required: true
         },
         yMargin: {
-            type: Number as PropType<number>,
+            type: [Number, String] as PropType<number | string>,
             required: false,
             default: () => 0
         }

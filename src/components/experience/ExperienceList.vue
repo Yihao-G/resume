@@ -65,18 +65,27 @@ import EmploymentJson from '../../data/employment.json'
 import ExpandableSectionContainer from '../common/ExpandableSectionContainer.vue'
 import MdiIcon from '../common/MdiIcon.vue'
 
+type ExperienceTimelineItem = TimelineItem & {
+    title: string
+    company: string
+    subtitle?: string
+    isVolunteer: boolean
+    openByDefault: boolean
+    achievements: string[]
+}
+
 export default defineComponent({
     name: 'ExperienceList',
     components: { MdiIcon, ExpandableSectionContainer, TimelineDisplay, SwitchBtn, SectionContainer },
     setup() {
         const showVolunteer = ref(true)
 
-        const employmentItems: ComputedRef<TimelineItem[]> = computed(() =>
+        const employmentItems: ComputedRef<ExperienceTimelineItem[]> = computed(() =>
             EmploymentJson
                 .filter(employment => showVolunteer.value || !employment.isVolunteer)
                 .map(item => ({
                     ...item,
-                    key: Symbol(item.title),
+                    key: item.title + '-' + item.company,
                     sideText: item.period
                 }))
         )

@@ -5,7 +5,7 @@
             <span>{{ name }}</span>
         </div>
         <div class="bg-white bg-opacity-50 h-1.5 mt-2 rounded-full border border-white border" :title="`${proficiency}%`">
-            <div class="h-full rounded-full" :style="{ 'background-color': color, width: proficiency + '%' }" />
+            <div class="h-full rounded-full" :style="{ backgroundColor: color, width: proficiency + '%' }" />
         </div>
     </div>
 </template>

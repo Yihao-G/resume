@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, toRefs, watch, ref, Ref, computed, PropType, h } from 'vue'
+import { defineComponent, toRefs, watch, ref, Ref, computed, PropType } from 'vue'
 import { toPascalCase } from '../../utils/convertStringCase'
 import { toStringSize } from '../../utils/toStringSize'
 
@@ -28,7 +28,7 @@ export default defineComponent({
         const iconPath: Ref<string | null> = ref(null)
 
         watch(icon, async() => {
-            const { default: svg } = await import(`../../../node_modules/mdi-es/dist/mdi${toPascalCase(icon.value)}`)
+            const { default: svg } = await import(`../../../node_modules/mdi-es/dist/mdi${toPascalCase(icon.value)}.js`)
             iconPath.value = svg
         }, { immediate: true })
 
