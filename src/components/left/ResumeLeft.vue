@@ -83,7 +83,7 @@ export default defineComponent({
 <style scoped>
 
 .references__overlay {
-    @apply absolute -inset-1.5 bg-gray-700 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-md flex justify-center items-center;
+    @apply absolute -inset-1.5 bg-gray-700 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-md flex justify-center items-center print:items-start print:top-0;
 }
 
 </style>

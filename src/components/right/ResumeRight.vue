@@ -100,7 +100,7 @@ export default defineComponent({
 <style scoped>
 
 .section {
-    @apply bg-blue-500 bg-opacity-70 text-white backdrop-filter backdrop-brightness-50 backdrop-blur-sm py-2 px-3.5 space-y-3;
+    @apply bg-blue-500 print:bg-blue-600 bg-opacity-70 text-white backdrop-filter backdrop-brightness-50 backdrop-blur-sm py-2 px-3.5 space-y-3;
 }
 
 .skills {

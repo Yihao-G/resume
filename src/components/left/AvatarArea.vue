@@ -7,7 +7,9 @@
             <span class="text-blue-500 font-bold">Gao</span>
         </h1>
         <h2 class="text-md">
-            Resolve problems & Create value
+            <span class="print:whitespace-nowrap">Resolve problems</span>
+            &
+            <span class="print:whitespace-nowrap">Create value</span>
         </h2>
     </div>
 </template>

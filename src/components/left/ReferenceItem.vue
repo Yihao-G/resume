@@ -1,5 +1,5 @@
 <template>
-    <section class="reference opacity-75 space-y-1">
+    <section class="reference opacity-75 space-y-1 print:invisible">
         <p class="reference__title h-4" />
         <p class="reference__subtitle h-3" />
         <p class="reference__content h-4" />

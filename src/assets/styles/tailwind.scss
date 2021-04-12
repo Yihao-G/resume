@@ -9,8 +9,8 @@ html, body, #app {
 }
 
 body {
-    @media screen {
+    @screen screen {
         background-image: url("/src/assets/background.jpg");
     }
-    @apply bg-center bg-cover bg-fixed;
+    @apply bg-center bg-cover bg-fixed print:text-sm;
 }

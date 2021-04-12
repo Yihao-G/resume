@@ -1,5 +1,5 @@
 <template>
-    <ul class="timeline" :style="{ '--y-margin': yMarginString }">
+    <ul class="timeline">
         <li
             v-for="(item, i) in items"
             :key="item.key"
@@ -17,14 +17,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue'
-import { toStringSize } from '../../utils/toStringSize'
-
-declare module 'csstype' {
-    interface Properties {
-        '--y-margin'?: string
-    }
-}
+import { defineComponent, PropType } from 'vue'
 
 export interface TimelineItem {
     key: string | number
@@ -37,17 +30,7 @@ export default defineComponent({
         items: {
             type: Array as PropType<readonly TimelineItem[]>,
             required: true
-        },
-        yMargin: {
-            type: [Number, String] as PropType<number | string>,
-            required: false,
-            default: () => 0
         }
-    },
-    setup(props) {
-        const yMarginString = computed(() => toStringSize(props.yMargin))
-
-        return { yMarginString }
     }
 })
 </script>
@@ -56,17 +39,15 @@ export default defineComponent({
 
 .timeline {
     @apply relative space-y-5;
-    margin-top: var(--y-margin);
-    margin-bottom: var(--y-margin);
 
     // the line of the timeline
     &::after {
         content: '';
-        @apply absolute bg-blue-600 w-0.5 left-4;
-        top: calc(-1 * var(--y-margin));
-        bottom: calc(-1 * var(--y-margin));
-        @screen sm {
-            @apply inset-x-0 mx-auto;
+        @apply absolute bg-blue-600 w-0.5 left-4 inset-y-0;
+        @screen screen {
+            @screen sm {
+                @apply inset-x-0 mx-auto;
+            }
         }
     }
 
@@ -99,52 +80,54 @@ export default defineComponent({
             @apply absolute w-8 bg-blue-600 left-0 z-10;
         }
 
-        @screen sm {
-            @apply w-1/2 pt-0;
+        @screen screen {
+            @screen sm {
+                @apply w-1/2 pt-0;
 
-            &-side-text {
-                top: calc(0.25rem + 1rem);
-            }
-
-            &::before {
-                top: calc(0.25rem + 1rem);
-            }
-
-            &::after {
-                top: calc(0.25rem + 1rem + 1rem / 2 - 1px);
-            }
-
-            &--left {
-                @apply left-0 pl-0 pr-8;
+                &-side-text {
+                    top: calc(0.25rem + 1rem);
+                }
 
                 &::before {
-                    @apply -right-2 left-auto;
+                    top: calc(0.25rem + 1rem);
                 }
 
                 &::after {
-                    @apply right-0 left-auto;
+                    top: calc(0.25rem + 1rem + 1rem / 2 - 1px);
                 }
 
-                .timeline__item-side-text {
-                    left: calc(100% + 1rem);
-                    @apply right-auto;
+                &--left {
+                    @apply left-0 pl-0 pr-8;
+
+                    &::before {
+                        @apply -right-2 left-auto;
+                    }
+
+                    &::after {
+                        @apply right-0 left-auto;
+                    }
+
+                    .timeline__item-side-text {
+                        left: calc(100% + 1rem);
+                        @apply right-auto;
+                    }
                 }
-            }
 
-            &--right {
-                @apply left-1/2 pl-8 pr-0;
+                &--right {
+                    @apply left-1/2 pl-8 pr-0;
 
-                &::before {
-                    @apply -left-2 right-auto;
-                }
+                    &::before {
+                        @apply -left-2 right-auto;
+                    }
 
-                &::after {
-                    @apply left-0 right-auto;
-                }
+                    &::after {
+                        @apply left-0 right-auto;
+                    }
 
-                .timeline__item-side-text {
-                    right: calc(100% + 1rem);
-                    @apply left-auto;
+                    .timeline__item-side-text {
+                        right: calc(100% + 1rem);
+                        @apply left-auto;
+                    }
                 }
             }
         }

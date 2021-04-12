@@ -5,7 +5,7 @@
                 <slot name="summary" />
             </span>
             <span class="block flex-grow" />
-            <span class="block">
+            <span class="block print:hidden">
                 <MdiIcon
                     icon="chevron-down"
                     class="header__chevron opacity-70 group-hover:opacity-100 transition-all"

@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                print: { raw: 'print' }
+                print: { raw: 'print' },
+                screen: { raw: 'screen' }
             }
         }
     },

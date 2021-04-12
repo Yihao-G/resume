@@ -7,13 +7,13 @@
                     Employment
                 </div>
                 <div class="flex-grow" />
-                <span>
+                <span class="print:hidden">
                     <SwitchBtn v-model="showVolunteer" label="Volunteer" />
                 </span>
             </div>
         </template>
         <template #content>
-            <div class="sm:text-center space-y-3">
+            <div class="sm:text-center print:text-left space-y-3">
                 <p class="font-serif text-xl italic">Let's build our future together</p>
                 <p>
                     <a
@@ -24,7 +24,7 @@
                     </a>
                 </p>
             </div>
-            <TimelineDisplay :items="employmentItems" class="mb-2" y-margin="1rem">
+            <TimelineDisplay :items="employmentItems" class="py-4">
                 <template
                     v-for="{ key, title, company, subtitle, isVolunteer, openByDefault, achievements } in employmentItems"
                     #[key]
@@ -57,7 +57,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ComputedRef, defineComponent, ref } from 'vue'
+import { computed, ComputedRef, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue'
 import SectionContainer from '../common/SectionContainer.vue'
 import SwitchBtn from '../common/SwitchBtn.vue'
 import TimelineDisplay, { TimelineItem } from '../common/TimelineDisplay.vue'
@@ -79,7 +79,6 @@ export default defineComponent({
     components: { MdiIcon, ExpandableSectionContainer, TimelineDisplay, SwitchBtn, SectionContainer },
     setup() {
         const showVolunteer = ref(true)
-
         const employmentItems: ComputedRef<ExperienceTimelineItem[]> = computed(() =>
             EmploymentJson
                 .filter(employment => showVolunteer.value || !employment.isVolunteer)
@@ -89,6 +88,21 @@ export default defineComponent({
                     sideText: item.period
                 }))
         )
+
+        const mediaQueryList = window.matchMedia('print')
+
+        function onPrinterMediaChanged() {
+            showVolunteer.value = mediaQueryList.matches ? false : showVolunteer.value
+            console.log('changed!', showVolunteer)
+        }
+
+        onMounted(() => {
+            mediaQueryList.addEventListener('change', onPrinterMediaChanged)
+        })
+        onBeforeUnmount(() => {
+            mediaQueryList.removeEventListener('change', onPrinterMediaChanged)
+        })
+
 
         return { showVolunteer, employmentItems }
     }
