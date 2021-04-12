@@ -6,10 +6,10 @@ module.exports = {
             screens: {
                 print: { raw: 'print' }
             }
-        },
+        }
     },
     variants: {
-        extend: {},
+        extend: {}
     },
-    plugins: [],
+    plugins: []
 }
