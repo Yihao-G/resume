@@ -1,6 +1,6 @@
 <template>
     <details class="section divide-y divide-blue-500" ref="detailsEl">
-        <summary class="header list-none flex items-center outline-none py-3 px-4">
+        <summary class="header group list-none flex items-center outline-none py-3 px-4 cursor-pointer">
             <span class="block">
                 <slot name="summary" />
             </span>
@@ -8,7 +8,7 @@
             <span class="block">
                 <MdiIcon
                     icon="chevron-down"
-                    class="header__chevron opacity-70 transition-all"
+                    class="header__chevron opacity-70 group-hover:opacity-100 transition-all"
                 />
             </span>
         </summary>
@@ -50,10 +50,6 @@ export default defineComponent({
 
 .section[open] .header__chevron {
     @apply transform rotate-180 opacity-100;
-}
-
-.header:hover .header__chevron {
-    @apply opacity-100;
 }
 
 </style>
