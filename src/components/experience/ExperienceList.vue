@@ -16,11 +16,12 @@
             <div class="sm:text-center space-y-3">
                 <p class="font-serif text-xl italic">Let's build our future together</p>
                 <p>
-                    <button
-                        class="py-2 px-4 text-lg bg-blue-600 hover:bg-blue-700 text-white transition-all font-bold rounded-md"
+                    <a
+                        class="py-2 px-4 text-lg bg-blue-600 hover:bg-blue-700 text-white transition-all font-bold rounded-md inline-block"
+                        href="mailto:contact@yihao.moe"
                     >
                         Hire Me
-                    </button>
+                    </a>
                 </p>
             </div>
             <TimelineDisplay :items="employmentItems" class="mb-2" y-margin="1rem">
