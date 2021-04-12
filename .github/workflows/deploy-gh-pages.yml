@@ -1,0 +1,41 @@
+name: Auto deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Git User
+        run: |
+          git config --global user.email "actions@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - run: npm ci
+      - run: npm run build
+
+      - run: echo 'resume.yihao.moe' > CNAME
+        working-directory: dist
+
+      - name: Commit
+        run: |
+          git init --initial-branch=gh-pages
+          git add --all
+          git commit -m 'Deploy to GitHub Pages'
+        working-directory: dist
+
+      - name: Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: dist
